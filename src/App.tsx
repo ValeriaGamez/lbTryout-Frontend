@@ -1,7 +1,10 @@
 import{ BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
+// @ts-ignore
 import Header from './components/Header.jsx';
+// @ts-ignore
 import ParsListPage from './pages/ParsListPage.jsx';
+// @ts-ignore
 import ParPage from './pages/ParPage.jsx';
 
 
