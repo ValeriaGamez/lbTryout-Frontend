@@ -33,13 +33,13 @@ const Header = () => {
 
     let handleAll = async () => {
         await getExportAll()
-        alert("RSR downloaded")
+        alert("All downloaded")
         navigate('/')
     }
 
     let handleRSR = async () => {
         await getExportRSR()
-        alert("RSR times + points downloaded")
+        alert("RSR times downloaded")
         navigate('/')
     }
 
