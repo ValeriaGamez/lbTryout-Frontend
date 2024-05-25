@@ -20,8 +20,11 @@ const ParPage = () => {
     }, [armNum])
     
     let getPar = async () => {
-        if(armNum === 'new') return 
+        if(armNum === 'new') return
+
         let response = await fetch(`/api/pars/${armNum}`)
+        console.log("response:", response)
+
         let data = await response.json()
         setPar(data)
     }
