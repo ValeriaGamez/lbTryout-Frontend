@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://lbtryout.onrender.com/', // Your Django development server URL
+        target: 'https://lbtryout.onrender.com/', // Your Django development server URL
         changeOrigin: true,
         //rewrite: (path) => path.replace(/^\/api/, ''),
       },
