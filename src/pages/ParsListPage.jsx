@@ -3,7 +3,7 @@ import ListItem from '../components/ListItem.jsx';
 import AddButton from '../components/AddButton';
 
 const ParsListPage = () => {
-
+    const apiUrl = import.meta.env.VITE_API_BASE_URL;
     let [pars, setPars] = useState([])
 
     useEffect(()=> {
@@ -12,7 +12,8 @@ const ParsListPage = () => {
     }, [])
 
     let getPars = async () => {
-        let response = await fetch('/api/pars/')
+        console.log('apiUrl:', apiUrl)
+        let response = await fetch(`${apiUrl}/api/pars/`)
         let data = await response.json()
         console.log('data', data)
         setPars(data);

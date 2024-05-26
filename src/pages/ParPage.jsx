@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
 const ParPage = () => {
+    const apiUrl = import.meta.env.VITE_API_BASE_URL;
+    // print apiUrl to console
+    console.log('apiUrl:', apiUrl)
 
     const { armNum } = useParams()
     const navigate = useNavigate()
@@ -21,8 +24,9 @@ const ParPage = () => {
     
     let getPar = async () => {
         if(armNum === 'new') return
-
-        let response = await fetch(`/api/pars/${armNum}`)
+        console.log("armNum:", armNum)
+        await console.log("apiUrl:", apiUrl)
+        let response = await fetch(`${apiUrl}/api/pars/${armNum}`)
         console.log("response:", response)
 
         let data = await response.json()
@@ -36,7 +40,7 @@ const ParPage = () => {
     }
 
     let createPar = async () => {
-        await fetch(`/api/pars/`, {
+        await fetch(`${apiUrl}/api/pars/`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -47,7 +51,7 @@ const ParPage = () => {
     }
 
     let updatePar = async () => {
-        await fetch(`/api/pars/${armNum}/`, {
+        await fetch(`${apiUrl}/api/pars/${armNum}/`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'
@@ -58,7 +62,7 @@ const ParPage = () => {
     }
 
     let deletePar = async ()=> {
-        await fetch(`/api/pars/${armNum}/`, {
+        await fetch(`${apiUrl}/api/pars/${armNum}/`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
