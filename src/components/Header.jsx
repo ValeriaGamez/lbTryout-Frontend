@@ -6,22 +6,22 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Header = () => {
-    // const apiUrl = import.meta.env.VITE_API_BASE_URL;
+    const apiUrl = import.meta.env.VITE_API_BASE_URL;
     const navigate = useNavigate()
 
     let getExportHeats = async () => {
-        // let response = await fetch(`${apiUrl}/api/pars/export_heats/`)
-        // let data = await response.json()
+        let response = await fetch(`${apiUrl}/api/pars/export_heats/`)
+        let data = await response.json()
     }
 
     let getExportAll = async () => {
-        // let response = await fetch(`/api/pars/export_all/`)
-        // let data = await response.json()
+        let response = await fetch(`${apiUrl}/api/pars/export_all/`)
+        let data = await response.json()
     }
 
     let getExportRSR = async () => {
-        // let response = await fetch(`/api/pars/export_rsr/`)
-        // let data = await response.json()
+        let response = await fetch(`${apiUrl}/api/pars/export_rsr/`)
+        let data = await response.json()
     }
 
     
