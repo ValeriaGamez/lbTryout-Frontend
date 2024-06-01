@@ -1,1 +1,9 @@
-##Frotend for django application
+## Frotend for django application
+
+## run 
+```bash
+npm install
+```
+```bash
+npm run dev
+```
